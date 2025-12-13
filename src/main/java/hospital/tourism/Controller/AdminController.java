@@ -51,7 +51,7 @@ public class AdminController {
     @PostMapping("/login/{adminemail}/{adminpassword}")
     public ResponseEntity<AdminEntity> loginAdmin(@PathVariable String adminemail,@PathVariable String adminpassword) {
 	
-    	AdminEntity admin = adminServiceimpl.loggingig(adminemail, adminpassword);
+    	AdminEntity admin = adminServiceimpl.login(adminemail, adminpassword);
 			
 				return ResponseEntity.ok(admin);
 	
